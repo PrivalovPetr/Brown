@@ -1,0 +1,6 @@
+﻿  priority_collection_2.cpp
+c:\users\pprivalov\source\repos\brown\priority_collection_2\priority_collection_2.cpp(33): warning C4018: '>=': signed/unsigned mismatch
+  c:\users\pprivalov\source\repos\brown\priority_collection_2\priority_collection_2.cpp(32): note: while compiling class template member function 'bool PriorityCollection<StringNonCopyable>::IsValid(PriorityCollection<StringNonCopyable>::Id) const'
+  c:\users\pprivalov\source\repos\brown\priority_collection_2\priority_collection_2.cpp(46): note: see reference to function template instantiation 'bool PriorityCollection<StringNonCopyable>::IsValid(PriorityCollection<StringNonCopyable>::Id) const' being compiled
+  c:\users\pprivalov\source\repos\brown\priority_collection_2\priority_collection_2.cpp(88): note: see reference to class template instantiation 'PriorityCollection<StringNonCopyable>' being compiled
+  priority_collection_2.vcxproj -> C:\Users\pprivalov\source\repos\Brown\priority_collection_2\Debug\priority_collection_2.exe
