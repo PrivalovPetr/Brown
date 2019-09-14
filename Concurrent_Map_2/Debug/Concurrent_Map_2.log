@@ -1,0 +1,22 @@
+﻿  Concurrent_Map_2.cpp
+c:\users\pprivalov\source\repos\brown\concurrent_map_2\concurrent_map_2.cpp(57): warning C4018: '<': signed/unsigned mismatch
+  c:\users\pprivalov\source\repos\brown\concurrent_map_2\concurrent_map_2.cpp(55): note: while compiling class template member function 'std::unordered_map<K,V,Hash,std::equal_to<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>> ConcurrentMap<K,V,Hash>::BuildOrdinaryMap(void) const'
+          with
+          [
+              K=Point,
+              V=size_t,
+              Hash=PointHash,
+              _Kty=Point,
+              _Ty=size_t
+          ]
+  c:\users\pprivalov\source\repos\brown\concurrent_map_2\concurrent_map_2.cpp(241): note: see reference to function template instantiation 'std::unordered_map<K,V,Hash,std::equal_to<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>> ConcurrentMap<K,V,Hash>::BuildOrdinaryMap(void) const' being compiled
+          with
+          [
+              K=Point,
+              V=size_t,
+              Hash=PointHash,
+              _Kty=Point,
+              _Ty=size_t
+          ]
+  c:\users\pprivalov\source\repos\brown\concurrent_map_2\concurrent_map_2.cpp(226): note: see reference to class template instantiation 'ConcurrentMap<Point,size_t,PointHash>' being compiled
+  Concurrent_Map_2.vcxproj -> C:\Users\pprivalov\source\repos\Brown\Concurrent_Map_2\Debug\Concurrent_Map_2.exe

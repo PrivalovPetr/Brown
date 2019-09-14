@@ -1,0 +1,4 @@
+﻿  print_stats.cpp
+c:\users\pprivalov\source\repos\brown\print_stats\print_stats.cpp(96): warning C4018: '<': signed/unsigned mismatch
+c:\users\pprivalov\source\repos\brown\print_stats\print_stats.cpp(147): warning C4018: '<': signed/unsigned mismatch
+  print_stats.vcxproj -> C:\Users\pprivalov\source\repos\Brown\print_stats\Debug\print_stats.exe

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExpressionTree", "ExpressionTree.vcxproj", "{1EE856CE-F8D3-4D4F-9765-77548708014C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EE856CE-F8D3-4D4F-9765-77548708014C}.Debug|x64.ActiveCfg = Debug|x64
+		{1EE856CE-F8D3-4D4F-9765-77548708014C}.Debug|x64.Build.0 = Debug|x64
+		{1EE856CE-F8D3-4D4F-9765-77548708014C}.Debug|x86.ActiveCfg = Debug|Win32
+		{1EE856CE-F8D3-4D4F-9765-77548708014C}.Debug|x86.Build.0 = Debug|Win32
+		{1EE856CE-F8D3-4D4F-9765-77548708014C}.Release|x64.ActiveCfg = Release|x64
+		{1EE856CE-F8D3-4D4F-9765-77548708014C}.Release|x64.Build.0 = Release|x64
+		{1EE856CE-F8D3-4D4F-9765-77548708014C}.Release|x86.ActiveCfg = Release|Win32
+		{1EE856CE-F8D3-4D4F-9765-77548708014C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1693F129-37E2-426B-A613-A6D4107E9BD7}
+	EndGlobalSection
+EndGlobal
