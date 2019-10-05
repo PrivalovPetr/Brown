@@ -1,0 +1,3 @@
+﻿  test.cpp
+c:\users\pprivalov\source\repos\brown\booking\test.cpp(57): warning C4101: 'ex': unreferenced local variable
+  booking.vcxproj -> C:\Users\pprivalov\source\repos\Brown\booking\Debug\booking.exe

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "booking", "booking.vcxproj", "{EDB998A0-CDF7-49F3-8401-C34C21B32A41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDB998A0-CDF7-49F3-8401-C34C21B32A41}.Debug|x64.ActiveCfg = Debug|x64
+		{EDB998A0-CDF7-49F3-8401-C34C21B32A41}.Debug|x64.Build.0 = Debug|x64
+		{EDB998A0-CDF7-49F3-8401-C34C21B32A41}.Debug|x86.ActiveCfg = Debug|Win32
+		{EDB998A0-CDF7-49F3-8401-C34C21B32A41}.Debug|x86.Build.0 = Debug|Win32
+		{EDB998A0-CDF7-49F3-8401-C34C21B32A41}.Release|x64.ActiveCfg = Release|x64
+		{EDB998A0-CDF7-49F3-8401-C34C21B32A41}.Release|x64.Build.0 = Release|x64
+		{EDB998A0-CDF7-49F3-8401-C34C21B32A41}.Release|x86.ActiveCfg = Release|Win32
+		{EDB998A0-CDF7-49F3-8401-C34C21B32A41}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C014750A-0B14-4952-BA8C-B77D7A3F989E}
+	EndGlobalSection
+EndGlobal

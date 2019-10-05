@@ -1,0 +1,4 @@
+﻿  UniquePtr.cpp
+c:\users\pprivalov\source\repos\brown\uniqueptr\uniqueptr.cpp(101): warning C4930: 'UniquePtr<Item> ptr(void)': prototyped function not called (was a variable definition intended?)
+c:\users\pprivalov\source\repos\brown\uniqueptr\uniqueptr.cpp(105): warning C4930: 'UniquePtr<Item> ptr2(UniquePtr<Item> (__cdecl *)(void))': prototyped function not called (was a variable definition intended?)
+  UniquePtr.vcxproj -> C:\Users\pprivalov\source\repos\Brown\UniquePtr\Debug\UniquePtr.exe
