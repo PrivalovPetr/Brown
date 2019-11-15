@@ -24,6 +24,8 @@ int main()
 		std::cin >> query;
 		if (query == "Bus")
 			manager.QueryBus(std::cin, std::cout);
+		if (query == "Stop")
+			manager.QueryStop(std::cin, std::cout);
 	}
 }
 

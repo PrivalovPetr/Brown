@@ -13,4 +13,12 @@ public:
 			return buses.at(name);
 		throw std::runtime_error("Bus not found");
 	}
+	const std::set<std::string> FindBusOnStop(const std::string& stop) {
+		std::set<std::string> res;
+		for (auto& bus : buses) {
+			if (bus.second.containStop(stop))
+				res.insert(bus.first);
+		}
+		return res;
+	}
 };

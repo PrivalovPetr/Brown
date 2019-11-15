@@ -9,11 +9,16 @@
 class StopManager {
 	std::unordered_map<std::string, Stop> stops;
 public:
-	void AddStop(const std::string& name, double lat, double lon) {
-		Stop s(name, lat, lon);
+	void AddStop(Stop s) {
 		stops[s._name] = s;
 	}
-	const Stop FindStop(const std::string& name) const {
+	Stop FindStop(const std::string& name){
+		if (stops.count(name) == 0) {
+			stops[name] = Stop(name);
+		}
+		return stops.at(name);
+	}
+	Stop TryFindStop(const std::string& name) const {
 		if (stops.count(name) == 0) {
 			throw std::runtime_error("Bus not found");
 		}

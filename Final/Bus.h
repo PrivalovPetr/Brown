@@ -8,10 +8,9 @@
 #include <iomanip>
 #include <set>
 #include <cmath>
+#include <algorithm>
 
 #include "stop_manager.h"
-
-const double EARTH_RADIUS = 6371000.0;
 
 std::string FindDelimeter(std::string_view line) {
 	if (line.find('-') != line.npos)
@@ -31,21 +30,23 @@ std::pair<std::string_view, std::optional<std::string_view>> SplitTwoStrict(std:
 	}
 }
 
-double CalculateLength(std::vector<std::string_view> route, const StopManager& manager) {
-	double length = 0.0;
-	Coordinate lhs;
-	Coordinate rhs = manager.FindStop(std::string(route[0])).GetCoordinate();;
-	for (size_t i = 1; i < route.size(); i++) {
+std::pair<double, double> CalculateLength(std::vector<std::string_view> route, bool linear, const StopManager& manager) {
+	double actualLength = 0.0;
+	double onEarthLength = 0.0;
+	for (size_t i = 0; i < route.size()-1; i++) {
 		//lat and lon in radians
-		lhs = rhs;
-		rhs = manager.FindStop(std::string(route[i])).GetCoordinate();
-			
-		length += std::acos(std::sin(lhs.lat) * std::sin(rhs.lat) +
-			std::cos(lhs.lat) * std::cos(rhs.lat) *
-			std::cos(std::abs(lhs.lon - rhs.lon))
-		) * EARTH_RADIUS;
+		auto [actual, onEarth] = manager.TryFindStop(std::string(route[i])).CalculateLength( manager.TryFindStop(std::string(route[i + 1])));
+		if (linear) {
+			onEarth *= 2.0;
+			actual += manager.TryFindStop(std::string(route[i + 1])).CalculateLength(manager.TryFindStop(std::string(route[i]))).first;
+		}
+		else {
+
+		}
+		actualLength += actual;
+		onEarthLength += onEarth;
 	}
-	return length;
+	return { actualLength, onEarthLength };
 }
 
 int UniqueStops(std::vector<std::string_view> route) {
@@ -84,30 +85,39 @@ public:
 	Bus(std::string& name, std::string stops) :
 		_name(name), raw_stops(stops)
 	{}
-	
+private:
+	void parseRoute() {
+		std::string_view raw(raw_stops);
+		auto del = FindDelimeter(raw);
+		_is_linear = del == " - ";
+		_route = Split(raw, del);
+	}
+
 public:
+	bool containStop(const std::string& stop) {
+		if (_route.empty()) {
+			parseRoute();
+		}
+		return find(_route.begin(), _route.end(), stop) != _route.end();
+	}
 	void getRouteStatistic(std::ostream& os, const StopManager& manager) {
 		if (_route.empty()) {
-			std::string_view raw(raw_stops);
-			
-			auto del = FindDelimeter(raw);
-			_is_linear = del == " - ";
-			_route = Split(raw, del);
+			parseRoute();
 		}
 		if (_route.empty()) {
 			os << "0 stops on route, 0 unique stops, 0.0 route length" << std::endl;
 			return;
 		}
 		size_t size = _route.size();
-		auto length = CalculateLength(_route, manager);
+		auto [actualLenth, onEarthLength] = CalculateLength(_route,  _is_linear, manager);
 		if (_is_linear) {
 			size = size * 2 - 1;
-			length *= 2;
 		}
 
 		os << size << " stops on route, ";
 		os << UniqueStops(_route) << " unique stops, ";
-		os << std::setprecision(6) << length << " route length" << std::endl;
+		os << std::setprecision(6) << actualLenth << " route length, ";
+		os << std::setprecision(6) << actualLenth/onEarthLength << " curvature" << std::endl;
 	}
 
 	const std::string getName() const {
