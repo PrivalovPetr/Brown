@@ -1,6 +1,7 @@
 #pragma once
 
 #include <map>
+#include <math.h>
 
 #include "json.h"
 #include "bus_manager.h"
@@ -34,36 +35,33 @@ private:
 	}
 
 	void AddEdgeFor2Stops(const std::string& bus_name, const std::vector<std::string>& route, bool is_roundtrip, double& weight, size_t from_idx, size_t to_idx) {
-		size_t from_id = GetStopId(route[from_idx]) * 2 + 1;
-		size_t to_id = GetStopId(route[to_idx]) * 2;
+		size_t from_id = GetStopId(route[from_idx]);
+		size_t to_id = GetStopId(route[to_idx]);
 		bool is_final = false;
 
-		Stop prev = stopManager.TryFindStop(route[to_idx - 1]);
+		Stop prev;
+		if (from_idx < to_idx)
+			prev = stopManager.TryFindStop(route[to_idx - 1]);
+		else 
+			prev = stopManager.TryFindStop(route[to_idx + 1]);
 		Stop to = stopManager.TryFindStop(route[to_idx]);
 
 		weight += prev.CalculateLength(to).first / 1000.0 / bus_velocity * 60.0;
-		//if (is_roundtrip && from_idx == route.size() - 2) {
-		//	weight += bus_wait_time;
-		//	++to_id;
-		//	is_final = true;
-		//}
-
-		edgesInfo[graph.AddEdge({ from_id, to_id, weight })] = { bus_name, int(to_idx - from_idx), is_final };
-
-		if (!is_roundtrip) {
-			//if (from_idx == 0) {
-			//	weight += bus_wait_time;
-			//	++from_id;
-			//	is_final = true;
-			//}
-			edgesInfo[graph.AddEdge({ to_id + 1, from_id - 1, weight })] = { bus_name,  int(to_idx - from_idx), is_final };
-		}
+		
+		edgesInfo[graph.AddEdge({ from_id, to_id, weight + bus_wait_time })] = { bus_name, std::abs(int(to_idx - from_idx)), is_final };
 	}
 
 	void AddBusEdges(const std::string& bus_name, const std::vector<std::string>& route, bool is_roundtrip) {
 		for (size_t from_idx = 0; from_idx < route.size() - 1; ++from_idx) {
 			double weight = 0.0;
 			for (size_t to_idx = from_idx + 1; to_idx < route.size(); ++to_idx) {
+				AddEdgeFor2Stops(bus_name, route, is_roundtrip, weight, from_idx, to_idx);
+			}
+		}
+		if(!is_roundtrip)
+		for (size_t from_idx = 1; from_idx < route.size(); ++from_idx) {
+			double weight = 0.0;
+			for (int to_idx = from_idx - 1; to_idx >= 0; --to_idx) {
 				AddEdgeFor2Stops(bus_name, route, is_roundtrip, weight, from_idx, to_idx);
 			}
 		}
@@ -79,8 +77,8 @@ public:
 	void InsertStop(const std::map<std::string, Json::Node>& jsoned) {
 		Stop stop(jsoned.at("name").AsString(), jsoned.at("latitude").AsDouble(), jsoned.at("longitude").AsDouble());
 		
-		size_t current_id = GetStopId(jsoned.at("name").AsString());
-		graph.AddEdge({ current_id * 2, current_id * 2 + 1, bus_wait_time*1.0 });
+		GetStopId(jsoned.at("name").AsString());
+		//graph.AddEdge({ current_id * 2, current_id * 2 + 1, bus_wait_time*1.0 });
 
 		for (const auto& distance : jsoned.at("road_distances").AsMap()) {
 			stop.actualDistance[distance.first] = distance.second.AsDouble();

@@ -17,21 +17,20 @@ public:
 		std::map<std::string, Json::Node> item;
 		const auto& edge = graph.GetEdge(edge_id);
 		
-		std::string s = processManager.id_stops.at(edge.from / 2);
-		std::string d = processManager.id_stops.at(edge.to / 2);
-		if (int(edge.from / 2) == int(edge.to / 2))  {
-			item["type"] = std::string("Wait");
-			item["stop_name"] = s;
-			item["time"] = processManager.bus_wait_time;
-			items.push_back(move(item));
-		}
-		else {
-			item["type"] = std::string("Bus");
-			item["time"] = edge.weight;
-			item["bus"] = processManager.edgesInfo.at(edge_id).bus_name;
-			item["span_count"] = processManager.edgesInfo.at(edge_id).span_count;
-			items.push_back(move(item));
-		}
+		std::string s = processManager.id_stops.at(edge.from);
+		std::string d = processManager.id_stops.at(edge.to);
+		
+		item["type"] = std::string("Wait");
+		item["stop_name"] = s;
+		item["time"] = processManager.bus_wait_time;
+		items.push_back(move(item));
+		
+		item["type"] = std::string("Bus");
+		item["time"] = edge.weight - processManager.bus_wait_time;
+		item["bus"] = processManager.edgesInfo.at(edge_id).bus_name;
+		item["span_count"] = processManager.edgesInfo.at(edge_id).span_count;
+		items.push_back(move(item));
+		
 	}
 
 	Json::Node QueryRoute(const std::map<std::string, Json::Node>& jsoned) {
@@ -40,8 +39,8 @@ public:
 		std::string from = jsoned.at("from").AsString();
 		std::string to = jsoned.at("to").AsString();
 		
-		size_t from_id = processManager.stops_id.at(from) * 2;
-		size_t to_id = processManager.stops_id.at(to) * 2;
+		size_t from_id = processManager.stops_id.at(from);
+		size_t to_id = processManager.stops_id.at(to);
 
 		auto routeInfo = router.BuildRoute(from_id, to_id);
 
