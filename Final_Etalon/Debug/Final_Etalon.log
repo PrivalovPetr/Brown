@@ -1,0 +1,84 @@
+﻿  descriptions.cpp
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(9): error C2059: syntax error: '.'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(10): error C2143: syntax error: missing ';' before '{'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(11): error C2059: syntax error: '.'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(15): error C2059: syntax error: 'if'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(15): error C2143: syntax error: missing ';' before '{'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(15): error C2447: '{': missing function header (old-style formal list?)
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(20): error C2059: syntax error: 'return'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(39): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(39): error C2143: syntax error: missing ',' before '&'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(40): error C2065: 'lhs': undeclared identifier
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(40): error C2065: 'rhs': undeclared identifier
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(40): error C3536: 'it': cannot be used before it is initialized
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(44): error C2065: 'rhs': undeclared identifier
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(44): error C2065: 'lhs': undeclared identifier
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(48): error C2653: 'Bus': is not a class or namespace name
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(48): error C2146: syntax error: missing ';' before identifier 'ParseFrom'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(48): error C2143: syntax error: missing ';' before '{'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(48): error C2447: '{': missing function header (old-style formal list?)
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(55): error C2065: 'InputQuery': undeclared identifier
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(55): error C2923: 'std::vector': 'InputQuery' is not a valid template type argument for parameter '_Ty'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(55): error C2903: 'allocator': symbol is neither a class template nor a function template
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(55): error C3203: 'allocator': unspecialized class template can't be used as a template argument for template parameter '_Alloc', expected a real type
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(55): error C2955: 'std::vector': use of class template requires template argument list
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\vector(625): note: see declaration of 'std::vector'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(55): error C2079: 'ReadDescriptions' uses undefined class 'std::vector'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2065: 'InputQuery': undeclared identifier
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2923: 'std::vector': 'InputQuery' is not a valid template type argument for parameter '_Ty'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2903: 'allocator': symbol is neither a class template nor a function template
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C3203: 'allocator': unspecialized class template can't be used as a template argument for template parameter '_Alloc', expected a real type
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2672: 'vector': no matching overloaded function found
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2783: 'std::vector<_Ty,_Alloc> std::vector(void) noexcept(<expr>)': could not deduce template argument for '_Ty'
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\vector(649): note: see declaration of 'std::vector'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2780: 'std::vector<_Ty,_Alloc> std::vector(const _Alloc &) noexcept': expects 1 arguments - 0 provided
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\vector(654): note: see declaration of 'std::vector'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2780: 'std::vector<_Ty,_Alloc> std::vector(const vector<_Ty,_Alloc>::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::size_type,const _Alloc &)': expects 2 arguments - 0 provided
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\vector(659): note: see declaration of 'std::vector'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2780: 'std::vector<_Ty,_Alloc> std::vector(const vector<_Ty,_Alloc>::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::size_type,const _Ty &,const _Alloc &)': expects 3 arguments - 0 provided
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\vector(673): note: see declaration of 'std::vector'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2780: 'std::vector<_Ty,_Alloc> std::vector(_Iter,_Iter,const _Alloc &)': expects 3 arguments - 0 provided
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\vector(719): note: see declaration of 'std::vector'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2780: 'std::vector<_Ty,_Alloc> std::vector(std::initializer_list<_Elem>,const _Alloc &)': expects 2 arguments - 0 provided
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\vector(726): note: see declaration of 'std::vector'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2780: 'std::vector<_Ty,_Alloc> std::vector(const std::vector<_Ty,_Alloc> &)': expects 1 arguments - 0 provided
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\vector(732): note: see declaration of 'std::vector'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2780: 'std::vector<_Ty,_Alloc> std::vector(const std::vector<_Ty,_Alloc> &,const _Alloc &)': expects 2 arguments - 0 provided
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\vector(746): note: see declaration of 'std::vector'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2780: 'std::vector<_Ty,_Alloc> std::vector(std::vector<_Ty,_Alloc> &&) noexcept': expects 1 arguments - 0 provided
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\vector(787): note: see declaration of 'std::vector'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2780: 'std::vector<_Ty,_Alloc> std::vector(std::vector<_Ty,_Alloc> &&,const _Alloc &) noexcept(<expr>)': expects 2 arguments - 0 provided
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\vector(793): note: see declaration of 'std::vector'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2641: cannot deduce template argument for 'std::vector'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(56): error C2512: 'std::vector': no appropriate default constructor available
+  c:\program files (x86)\microsoft visual studio\2017\professional\vc\tools\msvc\14.16.27023\include\vector(625): note: see declaration of 'std::vector'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(57): error C2662: 'void std::vector<_Ty,_Alloc>::reserve(const vector<_Ty,_Alloc>::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::size_type)': cannot convert 'this' pointer from 'std::vector' to 'std::vector<_Ty,_Alloc> &'
+  c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(57): note: Reason: cannot convert from 'std::vector' to 'std::vector<_Ty,_Alloc>'
+  c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(57): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(62): error C2825: 'Bus': must be a class or namespace when followed by '::'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(62): error C2510: 'Bus': left of '::' must be a class/struct/union
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(62): error C3861: 'ParseFrom': identifier not found
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(65): error C2653: 'Stop': is not a class or namespace name
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(65): error C3861: 'ParseFrom': identifier not found
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(69): error C2440: 'return': cannot convert from 'std::vector' to 'std::vector'
+  c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(69): note: Cannot copy construct class 'std::vector' due to ambiguous copy constructors or no available copy constructor
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(72): error C2059: syntax error: '}'
+c:\users\pprivalov\source\repos\brown\final_etalon\descriptions.cpp(72): error C2143: syntax error: missing ';' before '}'
+  Final_Etalon.cpp
+  json.cpp
+  requests.cpp
+  sphere.cpp
+  transport_catalog.cpp
+  transport_router.cpp
+c:\users\pprivalov\source\repos\brown\final_etalon\transport_router.cpp(67): error C2059: syntax error: '.'
+c:\users\pprivalov\source\repos\brown\final_etalon\transport_router.cpp(69): error C2059: syntax error: ')'
+c:\users\pprivalov\source\repos\brown\final_etalon\transport_router.cpp(72): error C2065: 'finish_stop_idx': undeclared identifier
+c:\users\pprivalov\source\repos\brown\final_etalon\transport_router.cpp(74): error C2397: conversion from 'double' to 'Graph::VertexId' requires a narrowing conversion
+c:\users\pprivalov\source\repos\brown\final_etalon\transport_router.cpp(73): warning C4244: 'initializing': conversion from 'double' to 'Graph::VertexId', possible loss of data
+c:\users\pprivalov\source\repos\brown\final_etalon\transport_router.cpp(79): error C2059: syntax error: '}'
+c:\users\pprivalov\source\repos\brown\final_etalon\transport_router.cpp(79): error C2143: syntax error: missing ';' before '}'
+c:\users\pprivalov\source\repos\brown\final_etalon\transport_router.cpp(81): error C2143: syntax error: missing ';' before '{'
+c:\users\pprivalov\source\repos\brown\final_etalon\transport_router.cpp(81): error C2447: '{': missing function header (old-style formal list?)
+  utils.cpp
+  Generating Code...
